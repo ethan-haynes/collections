@@ -27,10 +27,10 @@ console.log("size Stack:", s.size())
 console.log("size Queue:", q.size())
 
 for (let i of s) {
-  console.log("Stack:", i)
+	console.log("Stack:", i)
 }
 for (let i of q) {
-  console.log("Queue:", i)
+	console.log("Queue:", i)
 }
 console.log("Array.from Stack:", Array.from(s))
 console.log("Array.from Queue:", Array.from(q))

@@ -33,26 +33,26 @@ const Stack = function() {
 			return head.item
 		},
 		[Symbol.iterator]() {
-   		return {
-      	i: head,
-      	next() {
-        	if (!!this.i) {
+			 return {
+				i: head,
+				next() {
+					if (!!this.i) {
 						let previous = this.i
 						this.i = previous.next
-          	return { value: previous.item, done: false }
-        	}
-        		return { value: undefined, done: true }
-      		}
-    	}
-  	},
+						return { value: previous.item, done: false }
+					}
+						return { value: undefined, done: true }
+					}
+			}
+		},
 		map(callback) {
-      let i = 0
-      let items = [...this]
-      let result = []
-  		for (let item of this) {
-        result.push(callback(item, i, items))
-      }
-      return result
+			let i = 0
+			let items = [...this]
+			let result = []
+			for (let item of this) {
+				result.push(callback(item, i, items))
+			}
+			return result
 		},
 		toString() {
 			return String([...this])
