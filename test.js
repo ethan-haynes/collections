@@ -1,0 +1,42 @@
+var Stack = require("./stack")
+const Queue = require('./queue')
+
+console.log("Stack Test")
+
+const s = new Stack()
+const q = new Queue()
+s.push(22,456,456)
+q.enqueue(22,456,456)
+s.push(23)
+q.enqueue(23)
+s.push(44)
+q.enqueue(44)
+s.push(1)
+q.enqueue(1)
+console.log("Stack Empty:", s.isEmpty, "Queue Empty:", q.isEmpty)
+console.log("Private n: Stack", s.n, "Private n: Stack", q.n)
+console.log("Private Inner Class Stack:", s.Node)
+console.log("Private Inner Queue Stack:", q.Node)
+console.log("Stack Object:", s)
+console.log("Queue Object:", q)
+console.log("toString Stack:", s.toString())
+console.log("toString Queue:", q.toString())
+console.log("peek Stack:", s.peek())
+console.log("peek Queue:", q.peek())
+console.log("size Stack:", s.size())
+console.log("size Queue:", q.size())
+
+for (let i of s) {
+  console.log("Stack:", i)
+}
+for (let i of q) {
+  console.log("Queue:", i)
+}
+console.log("Array.from Stack:", Array.from(s))
+console.log("Array.from Queue:", Array.from(q))
+console.log("[...s] :", [...s])
+console.log("[...q] :", [...q])
+console.log("map Stack: ")
+console.log("map Stack: ", s.map((a,b,c) => console.log(a,b,c)))
+console.log("map Queue: ")
+console.log("map Queue: ", q.map((a,b,c) => console.log(a,b,c)))
