@@ -3,13 +3,14 @@ const Point = function(x_point=0, y_point=0) {
   const y = y_point
 
   return {
-    get x {
+    get x() {
       return x
     },
-    get y {
+    get y() {
       return y
     },
-    get r {
+    /* get polar radius */
+    get r() {
       return Math.sqrt(x*x + y*y)
     }
   }
